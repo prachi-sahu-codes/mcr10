@@ -23,7 +23,7 @@ export const Products = () => {
           {filteredData.map((item) => (
             <tr
               key={item.id}
-              className="border-2"
+              className="border-2 cursor-pointer hover:bg-slate-100"
               onClick={() => navigate(`/productDetail/${item.id}`)}
             >
               <td className="p-2">
