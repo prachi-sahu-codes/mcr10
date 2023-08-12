@@ -5,6 +5,8 @@ import { Department } from "./pages/Department";
 import { NewProduct } from "./pages/NewProduct";
 import { Products } from "./pages/Products";
 import { ProductDetail } from "./pages/ProductDetail";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const getActiveStyle = ({ isActive }) => ({
   color: isActive ? "#fff" : "#c2c2c2",
@@ -13,6 +15,18 @@ const getActiveStyle = ({ isActive }) => ({
 function App() {
   return (
     <div className="App flex w-screen h-screen overflow-hidden">
+      <ToastContainer
+        position="top-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <nav className="w-56 h-screen p-12 text-xl flex flex-col gap-16 bg-primary">
         <NavLink to="/" style={getActiveStyle}>
           Dashboard

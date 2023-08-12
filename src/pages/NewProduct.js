@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import { useData } from "../context/DataContext";
+import { toast } from "react-toastify";
 
 const categoryOption = ["Kitchen", "Clothing", "Toys"];
 
@@ -41,8 +42,9 @@ export const NewProduct = () => {
         delivered: 0,
         imageUrl: "",
       });
+      toast.success("New Product added");
     } else {
-      alert("Please fill all the fields");
+      toast.error("Please fill all the fields");
     }
   };
   return (
