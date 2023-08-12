@@ -6,3 +6,10 @@
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
 }
+
+.div-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate((-50%, -50%));
+}

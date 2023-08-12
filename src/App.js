@@ -12,7 +12,7 @@ const getActiveStyle = ({ isActive }) => ({
 
 function App() {
   return (
-    <div className="App flex">
+    <div className="App flex w-screen h-screen overflow-hidden">
       <nav className="w-56 h-screen p-12 text-xl flex flex-col gap-16 bg-primary">
         <NavLink to="/" style={getActiveStyle}>
           Dashboard
