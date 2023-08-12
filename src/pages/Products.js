@@ -1,9 +1,12 @@
 import React from "react";
 import { useData } from "../context/DataContext";
 import { Filters } from "../components/Filters";
+import { useNavigate } from "react-router-dom";
 
 export const Products = () => {
   const { filteredData } = useData();
+  const navigate = useNavigate();
+
   return (
     <div className="px-10 py-6 w-full overflow-y-scroll">
       <Filters />
@@ -18,7 +21,11 @@ export const Products = () => {
             <th className="p-2 text-left">Supplier</th>
           </tr>
           {filteredData.map((item) => (
-            <tr key={item.id} className="border-2">
+            <tr
+              key={item.id}
+              className="border-2"
+              onClick={() => navigate(`/productDetail/${item.id}`)}
+            >
               <td className="p-2">
                 <img
                   src={item.imageUrl}
